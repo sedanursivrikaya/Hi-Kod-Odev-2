@@ -1,69 +1,29 @@
-//Dikdörtgen Alanı Hesaplayan Fonksiyon
-void main() {
-  double uzunKenar = 4.76;
-  double kisaKenar = 9.54;
+Double olarak uzunKenar ve kısaKenar değişkenlerini alıp Dikdörtgenin alanını bulan bir fonksiyon yazınız. Ve bu fonksiyonu 4.76 ve 9.54 değerleriyle çağırınız. 
 
-  double alan = dikdortgenAlaniHesapla(uzunKenar, kisaKenar);
-  print("Dikdörtgenin Alanı: $alan");
-}
+Aşağıda açıklanan fonksiyonları ve main fonksiyonunu yazarak tamamlayınız: 
 
-double dikdortgenAlaniHesapla(double uzunKenar, double kisaKenar) {
-  return uzunKenar * kisaKenar;
-}
+Fonksiyonun Amacı: Bir tam sayı a ve b parametrelerini alarak, a değerini 2^(b-1) ile çarpan bir fonksiyon yazınız. 
 
+Fonksiyon Tanımı: 
 
-//carp Fonksiyonu ve main Fonksiyonu
-void main() {
-  int sonuc = carp(5, 3);
-  print("Sonuç: $sonuc"); // Sonuç: 20
-}
+int carp(int a, int b): Bu fonksiyon iki tam sayı parametre alacak. 
 
-int carp(int a, int b) {
-  int multiplyByTwo(int x) {
-    return x * 2;
-  }
+Fonksiyon içinde int multiplyByTwo(int x) adlı bir iç fonksiyon tanımlanmalı. Bu iç fonksiyon, x değerini 2 ile çarparak döndürmelidir. 
 
-  int result = a;
-  for (int i = 1; i < b; i++) {
-    result = multiplyByTwo(result);
-  }
+carp fonksiyonu, bir result değişkeni kullanarak a değerini başlatmalıdır. 
 
-  return result;
-}
+result değeri, b-1 kez multiplyByTwo fonksiyonu kullanılarak iki ile çarpılmalıdır. 
 
+Döngü tamamlandıktan sonra result değeri geri döndürülmelidir. 
 
-//Listeden Eleman Silen Fonksiyon
-void main() {
-  List<String> myList = ["apple", "banana", "cherry"];
-  print("Orijinal Liste: $myList");
+Main Fonksiyonu: 
 
-  sil(myList, "banana");
-  print("Güncellenmiş Liste: $myList");
-}
+main fonksiyonunu yazınız ve içinde carp fonksiyonunu a=5 ve b=3 parametreleriyle çağırarak sonucu ekrana yazdırınız. 
 
-void sil(List<String> list, String item) {
-  list.remove(item);
-}
+Sonucun 20 olması beklenmektedir. 
 
+ 
 
-//Şekiller Class'ı ve Objeleri
-class Sekil {
-  String adi;
-  Sekil(this.adi);
-}
+Girilen listeden girilen veriyi silen fonksiyon örneğini yazınız. 
 
-void main() {
-  Sekil kare = Sekil("Kare");
-  Sekil dikdortgen = Sekil("Dikdörtgen");
-  Sekil daire = Sekil("Daire");
-  Sekil ucgen = Sekil("Üçgen");
-  Sekil elips = Sekil("Elips");
-
-  List<Sekil> sekiller = [kare, dikdortgen, daire, ucgen, elips];
-
-  for (var sekil in sekiller) {
-    print(sekil.adi);
-  }
-}
-
-
+Bir tane şekiller class’ı oluşturunuz ve 5 tane şekil object’i (objesi) tanımlayınız. 
